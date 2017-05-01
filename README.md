@@ -1,7 +1,7 @@
-# Stubs
+# Slips and chits
 
 Sinatra based app that does minor lookup between receipts
-and spending habits.
+for spending habits and sinkholes.
 
 ### License
 

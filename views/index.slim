@@ -1,11 +1,11 @@
 h2 New receipt
 
 form action="/" method="post"
-  input type="text" name="date_spend" placeholder="Date of spend" required="true" autofocus="true"
-  input type="text" name="amount" placeholder="Amount" required="true"
-  input type="text" name="category" placeholder="Category" required="true"
-  input type="text" name="location" placeholder="Location or business" required="true"
-  textarea name="notes" placeholder="Notes"
+  input type="text" name="chit[purchase_date]" placeholder="Date of spend" required="true" autofocus="true"
+  input type="text" name="chit[amount]" placeholder="Amount" required="true"
+  input type="text" name="chit[category]" placeholder="Category" required="true"
+  input type="text" name="chit[location]" placeholder="Location or business" required="true"
+  textarea name="chit[notes]" placeholder="Notes"
   input.button type="submit" value="Add"
 
 h2 Rolling week

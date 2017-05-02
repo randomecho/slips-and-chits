@@ -9,3 +9,8 @@ DataMapper.finalize
 get '/' do
   slim :index
 end
+
+post '/' do
+  Chit.create params[:chit]
+  redirect to('/')
+end

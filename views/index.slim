@@ -9,3 +9,18 @@ form action="/" method="post"
   input.button type="submit" value="Add"
 
 h2 Rolling week
+
+table border="1"
+  tr
+    th Date
+    th Amount
+    th Category
+    th Location
+    th Notes
+  - @chits.each do |chit|
+    tr
+      td = chit.purchase_date
+      td = chit.amount
+      td = chit.category
+      td = chit.location
+      td = chit.notes

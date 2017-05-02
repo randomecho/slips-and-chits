@@ -7,6 +7,8 @@ require_relative 'models/chit'
 DataMapper.finalize
 
 get '/' do
+  @chits = Chit.all
+
   slim :index
 end
 

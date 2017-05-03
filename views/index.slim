@@ -3,7 +3,23 @@ h2 New receipt
 form action="/" method="post"
   input type="text" name="chit[purchase_date]" placeholder="Date of spend" required="true" autofocus="true"
   input type="text" name="chit[amount]" placeholder="Amount" required="true"
-  input type="text" name="chit[category]" placeholder="Category" required="true"
+  select name="chit[category]"
+    option value='1' Eating out
+    option value='2' Groceries
+    option value='3' Car
+    option value='4' Gas
+    option value='5' Pets
+    option value='6' Entertainment
+    option value='7' Health
+    option value='8' Home
+    option value='9' Clothes
+    option value='10' Comms
+    option value='11' Toys
+    option value='12' Books
+    option value='13' Travel
+    option value='14' Rent
+    option value='15' Gifts
+    option value='16' Donations
   input type="text" name="chit[location]" placeholder="Location or business" required="true"
   textarea name="chit[notes]" placeholder="Notes"
   input.button type="submit" value="Add"

@@ -1,7 +1,7 @@
 h2 New receipt
 
 form action="/" method="post"
-  input type="text" name="chit[purchase_date]" placeholder="Date of spend" required="true" autofocus="true"
+  input type="text" name="chit[purchase_date]" placeholder="Date of spend" required="true" autofocus="true" value=Time.now.strftime("%Y-%m-%d %H:%M:%S")
   input type="text" name="chit[amount]" placeholder="Amount" required="true"
   select name="chit[category]"
     option value='1' Eating out

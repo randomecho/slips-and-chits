@@ -22,7 +22,7 @@ table border="1"
   - @chits.each do |chit|
     tr
       td = chit.purchase_date
-      td = chit.amount
+      td = sprintf("%.2f", chit.amount)
       td = chit.category
       td = chit.location
       td = chit.notes

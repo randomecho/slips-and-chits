@@ -1,11 +1,14 @@
-require 'sinatra'
 require 'data_mapper'
 require 'dm-timestamps'
+require 'sinatra'
+require 'slim'
 
 DataMapper::Logger.new($stdout, :debug)
 DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/slips.db")
 require_relative 'models/chit'
 DataMapper.finalize
+
+Slim::Engine.set_options format: :html
 
 categories = {
   eat_out: 'Eating out',

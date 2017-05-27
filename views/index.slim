@@ -23,6 +23,6 @@ table border="1"
     tr
       td = chit.purchase_date
       td = sprintf("%.2f", chit.amount)
-      td = chit.category
+      td = @categories.fetch(:"#{chit.category}", 'No category')
       td = chit.location
       td = chit.notes

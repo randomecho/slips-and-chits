@@ -8,6 +8,7 @@ h1, h2 {
 
 table {
   border-collapse: collapse;
+  margin-top: 3em;
   table-layout: fixed;
   width: 100%;
 }

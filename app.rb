@@ -30,7 +30,7 @@ categories = {
 }
 
 get '/' do
-  @chits = Chit.all(:order => [:purchase_date.desc, :created_at.desc])
+  @chits = Chit.all(:limit => 21, :order => [:purchase_date.desc, :created_at.desc])
   @categories = categories
   slim :index
 end

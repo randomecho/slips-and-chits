@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+th {
+  background: #111;
+  color: #fff;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.5em;
+}

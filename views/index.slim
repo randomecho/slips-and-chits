@@ -19,7 +19,9 @@ table
     th Notes
   - @chits.each do |chit|
     tr
-      td = chit.purchase_date
+      td
+        a href="/edit/#{chit.id}"
+          = chit.purchase_date
       td = sprintf("%.2f", chit.amount)
       td = @categories.fetch(:"#{chit.category}", 'No category')
       td = chit.location

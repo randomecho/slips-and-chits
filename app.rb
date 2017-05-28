@@ -35,7 +35,20 @@ get '/' do
   slim :index
 end
 
+get '/edit/:id' do
+  @chit = Chit.get(params['id'])
+  @dollar_amount = sprintf("%.2f", @chit.amount)
+  @categories = categories
+  slim :edit
+end
+
 post '/' do
   Chit.create params[:chit]
+  redirect to('/')
+end
+
+put '/edit/:id' do
+  @chit = Chit.get(params['id'])
+  @chit.update params[:chit]
   redirect to('/')
 end

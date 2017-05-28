@@ -1,0 +1,15 @@
+h2 Edit existing
+
+form action="/edit/#{@chit.id}" method="post"
+  input type="hidden" name="_method" value="PUT"
+  input type="text" name="chit[purchase_date]" placeholder="Date of spend" required="true" autofocus="true" value="#{@chit.purchase_date}"
+  input type="text" name="chit[amount]" placeholder="Amount" required="true" value="#{@dollar_amount}"
+  select name="chit[category]"
+    - @categories.each do |key, display|
+      - if "#{key}" == @chit.category
+        option value="#{key}" selected="selected" #{display}
+      - else
+        option value="#{key}" #{display}
+  input type="text" name="chit[location]" placeholder="Location or business" required="true" value="#{@chit.location}"
+  textarea name="chit[notes]" placeholder="Notes" #{@chit.notes}
+  input.button type="submit" value="Update"

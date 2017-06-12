@@ -6,11 +6,13 @@ for spending habits and sinkholes.
 
 ## Setup
 
+```
+$ bundle install
 $ irb
 irb> require './app'
 irb> Chit.auto_migrate!
 irb> exit
-
+```
 
 ### License
 
